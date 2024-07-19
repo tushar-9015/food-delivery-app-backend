@@ -1,4 +1,3 @@
-import { dirname, join } from "path";
 import foodModel from "../models/foodModel.js";
 import fs from "fs"
 import path from 'path'
@@ -25,7 +24,6 @@ const addFood = async (req, res) => {
 }
 
 //all food list
-
 const listFood = async (req, res) => {
 try {
     const foods = await foodModel.find({})
@@ -96,7 +94,5 @@ const removeFood = async (req, res) => {
         res.json({success: false, message: "food not removed"}) 
     }
 }
-
-
 
 export {addFood, listFood, removeFood, getFood, updateFood};
